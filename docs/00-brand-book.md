@@ -47,7 +47,7 @@ Três vozes, cada uma com um papel fixo:
 - **Archivo** (`body`) para tudo que se lê: `dek`, `lede`, `body`, `body-s`, `caption`, `heading`, `button`. Negrito 600 só em `heading`, `button` e trechos em destaque dentro de `lede`.
 - **IBM Plex Mono** (`mono`) para tudo que se mede: `num-xl`, `num-l`, `data`, `code` e os rótulos em caixa alta `eyebrow` e `label`. Caixa alta existe apenas nesses dois estilos.
 
-Hierarquia de uma seção, de cima para baixo: `eyebrow` (pílula) → `display-l` → `dek` em `text` → `lede` em `text-soft` → blocos. O mesmo esqueleto vale para slide, página de site e capítulo de proposta.
+Hierarquia de uma seção, de cima para baixo: `eyebrow` (pílula) → `display-l` → `dek` em `text` → `lede` em `text-soft` → blocos. Esse esqueleto vale para slide, dataroom e capítulo de proposta. Em site e landing page a seção começa no `display-l`: o eyebrow aparece só no topo da página e nunca numerado (veja **Aplicações**).
 
 Archivo é a fonte da UBLE desde o designer original (Figma, 2024). Space Grotesk, Inter e Space Mono apareceram em materiais de 2026 e estão descontinuadas; ao retocar esses materiais, troque pela família correta.
 
@@ -100,5 +100,5 @@ A voz se adapta ao contexto (investidor, cliente, parceiro, time), mas três coi
 ## Como consumir
 
 - Site, dataroom, Lovable e qualquer HTML: carregue `tokens.css` e use as variáveis (`var(--flamingo)`, `var(--space-7)`, `var(--font-mono)`) e as classes de texto (`.display-l`, `.lede`, `.num-xl`). Fontes via Google Fonts: Archivo Black, Archivo 400/500/600, IBM Plex Mono 400/500 (o dataroom hospeda as mesmas via @fontsource por exigência de CSP).
-- Deck, proposta, relatório: copie os valores hexadecimais dos tokens e aplique o equivalente estático da tabela acima. O esqueleto de seção (`eyebrow` → `display` → `dek` → `lede` → blocos) vale igual.
+- Deck, proposta, relatório: copie os valores hexadecimais dos tokens e aplique o equivalente estático da tabela acima. O esqueleto de seção (`eyebrow` → `display` → `dek` → `lede` → blocos) vale igual. No site, sem eyebrow por seção.
 - Peça a um agente de IA que leia este README antes de produzir qualquer material da UBLE; os tokens, os componentes e a seção Tom de voz são o briefing.

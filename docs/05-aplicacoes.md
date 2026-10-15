@@ -4,7 +4,8 @@ O sistema é um só, mas cada mídia tem um tema, um esqueleto e um conjunto de 
 
 | Mídia | Tema | Vidro e aurora | Fontes | Esqueleto |
 |---|---|---|---|---|
-| Site, landing page, dataroom | `dark` | Vivos | Google Fonts ou @fontsource | eyebrow → display-l → dek → lede → bento/cards |
+| Site e landing page | `dark` | Vivos | Google Fonts ou @fontsource | display-l → dek → lede → bento/cards; eyebrow só no topo da página, sem número |
+| Dataroom | `dark` | Vivos | @fontsource | eyebrow numerado → display-l → dek → lede → bento/cards |
 | Painel e produto | `dark` | Vivos, sem aurora em telas densas | @fontsource | dock lateral + topo fixo + cards |
 | Deck projetado (pitch, comercial) | `dark` | Equivalente estático | Instaladas (Archivo, Archivo Black, IBM Plex Mono) | capa display-xl; slides eyebrow → display-m → 1 bloco |
 | Proposta, relatório, business case | `light`, capa em `dark` | Nenhum | Instaladas | capa escura; miolo em documento claro, 980px |
@@ -12,6 +13,12 @@ O sistema é um só, mas cada mídia tem um tema, um esqueleto e um conjunto de 
 | E-mail | `light` | Nenhum | Fallback: Arial para texto, Courier New para dado | logo tipográfico, body 16px, um CTA |
 | LinkedIn e social | `dark` ou bloco `flamingo` | Aurora congelada como imagem | Instaladas | wordmark canvas, display-l, uma frase |
 | Impressão (brinde, papelaria) | `light` | Nenhum | Instaladas | wordmark ink, muito espaço |
+
+## Site e landing page
+
+- O site é navegado, não lido em ordem. Seções abrem direto no título (`display-l`), sem eyebrow e sem número.
+- Eyebrow só no topo de cada página, para dizer o que ela é ("Cases", "Calculadora"), e acima do CTA final. Nunca numerado.
+- Numeração só onde a ordem é informação real, como os passos de um processo ("Passo 1 · Conectar").
 
 ## Deck
 

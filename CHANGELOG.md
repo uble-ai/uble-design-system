@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 (2026-10-15)
+
+- Eyebrow: em site e landing page passa a ser opcional e nunca numerado. As seções abrem direto no título; o eyebrow fica só no topo da página ou acima do CTA. Numeração continua em deck, dataroom e proposta, que são lidos em ordem.
+- Aplicações: site e dataroom em linhas separadas, com bloco próprio de regras para site.
+- Antipadrões: seções de site numeradas e rotuladas.
+- Plugin uble-brand 0.1.1 com a mesma regra.
+
 ## 1.0.0 (2026-10-15)
 
 - Sistema inicial: tokens em dois temas (escuro palco, claro documento), brand book, tom de voz por contexto, logo, movimento, graficos, aplicacoes por midia, antipadroes.

@@ -31,6 +31,7 @@ O que a UBLE não faz, com o motivo. Se um material cai em qualquer item desta l
 - Pílulas e botões em várias cores. Botão principal é `text` sobre `bg`; secundário é borda `line`; nada mais.
 - Anéis e arcos circulares das capas antigas. Substituídos pela aurora e pela grade.
 - Visual padrão do shadcn no lado público. Shadcn é aceitável só no admin.
+- Seções de site numeradas e rotuladas ("01 O problema"). Faz o site parecer apresentação. Numeração é de deck, dataroom e proposta.
 
 ## Dado e gráfico
 
