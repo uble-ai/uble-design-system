@@ -1,0 +1,47 @@
+<!-- @dsCard height=300 -->
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: var(--bg); }
+  .cover { position: relative; width: 960px; height: 300px; overflow: hidden; background: var(--bg); }
+  .cover svg { position: absolute; inset: 0; width: 960px; height: 300px; display: block; }
+  .flam { fill: var(--flamingo); }
+  .ink { fill: var(--text); }
+  .shark { fill: var(--shark); }
+  .muted { fill: var(--text-muted); }
+  .grid { stroke: var(--bg); stroke-width: 1; fill: none; opacity: 0.9; }
+  .ring { fill: none; stroke: var(--flamingo); stroke-width: 1.5; opacity: 0.6; }
+  .tile { rx: var(--radius-lg); }
+  .name { position: absolute; left: 48px; top: 134px; margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 60px; line-height: 0.95; letter-spacing: -0.03em; color: var(--text); }
+  .tag { position: absolute; left: 48px; top: 258px; margin: 0; font-family: var(--font-body); font-size: 14px; line-height: 1.3; color: var(--text-muted); max-width: 440px; }
+</style>
+</head>
+<body>
+<div class="cover">
+  <!-- Derivação
+       blocos: flamingo 400×126 · text 160×126 · shark 200×126 · text-muted 200×126; todos sangrando pela borda superior (y = -14, rx = radius-lg)
+       arranjo: faixa de quatro blocos desiguais, largura total, Flamingo dominante à esquerda (a marca é Flamingo + quente escuro)
+       padrão: grade de 72px (space-18) cortada dos blocos na cor do fundo, "precisa, técnica, mono, grade": é a grade de fundo da aurora; mais um ponto do pulso da trilha em flamingo sobre o bloco shark
+       escalas: passos space-18 (72), rx radius-lg (14), ponto r 4 (space-1) -->
+  <svg viewBox="0 0 960 300" aria-hidden="true">
+    <rect class="flam tile" x="0" y="-14" width="400" height="126"/>
+    <rect class="ink tile" x="400" y="-14" width="160" height="126"/>
+    <rect class="shark tile" x="560" y="-14" width="200" height="126"/>
+    <rect class="muted tile" x="760" y="-14" width="200" height="126"/>
+    <g class="grid">
+      <path d="M72 0V112M144 0V112M216 0V112M288 0V112M360 0V112M432 0V112M504 0V112M576 0V112M648 0V112M720 0V112M792 0V112M864 0V112M936 0V112"/>
+      <path d="M0 72H960"/>
+    </g>
+    <circle class="flam" cx="648" cy="72" r="4"/>
+    <circle class="ring" cx="648" cy="72" r="7"/>
+  </svg>
+  <h1 class="name">UBLE<br>Design System</h1>
+  <p class="tag">Recupera a receita que o checkout perdeu.</p>
+</div>
+</body>
+</html>

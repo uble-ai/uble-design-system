@@ -1,0 +1,273 @@
+<!doctype html><html data-theme="dark"><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+/* UBLE Design System — generated from tokens.json */
+:root, [data-theme="dark"] {
+  --bg: #07090c; /* Fundo de pagina. Escuro: nunca preto puro. Claro: o canvas quente da marca, nunca branco puro. */
+  --surface: #151a21; /* Cards, paineis, cabecalho de tabela. Base solida de todo vidro (`glass-*`). */
+  --surface-2: #192227; /* Segunda elevacao: dropdowns, dock, modais. Escuro: o ardosia original do designer (2024). */
+  --line: rgba(239,238,235,0.10); /* Bordas e divisores. Unica linha do sistema; nunca borda solida clara. */
+  --line-strong: rgba(239,238,235,0.20); /* Borda de campo em foco/hover e divisor de secao. */
+  --text: #efeeeb; /* Texto principal sobre `bg`, `surface` e `surface-2`. 17:1 escuro, 15:1 claro. */
+  --text-soft: #bfc4cb; /* Texto secundario, lede, celulas de tabela. Minimo 9:1 em todo fundo. */
+  --text-muted: #7d848e; /* Rotulos, notas, eixos, legendas. 5,3:1 sobre `bg`, 4,6:1 sobre `surface` (escuro); 4,7:1 (claro). */
+  --text-dim: #4a515b; /* SO decorativo (`aria-hidden`): numeros de secao nao visitados, linhas-base de diagramas. Reprova como texto. */
+  --flamingo: #fd542d; /* Flamingo, a cor da UBLE (#FD542D, o mesmo do avatar oficial). Luz, nunca tinta: numero-chave, estado ativo, UM destaque por tela. Nunca bloco grande de fundo, exceto capa de social. */
+  --flamingo-text: #fd542d; /* Flamingo como TEXTO e link. Escuro: 6,2:1 sobre `bg`. Claro: tom escurecido, 5,1:1 sobre `bg`; o #FD542D puro da 2,8:1 no claro e e proibido como texto. */
+  --flamingo-soft: #ff9a6b; /* Ponto medio do gradiente de texto do hero (`flamingo` -> `flamingo-soft` -> `shark`). So no h1 da capa. */
+  --flamingo-tint: rgba(253,84,45,0.14); /* Fundo de item ativo, chip selecionado, destaque de linha. Sempre com `flamingo-text` por cima. */
+  --on-flamingo: #07090c; /* Texto sobre preenchimento `flamingo`: sempre tinta escura (6,2:1). Branco sobre Flamingo da 2,8:1 e so vale no wordmark do avatar. */
+  --shark: #6c99a4; /* Shark, cor secundaria. Semantica fixa nos graficos: a perda e o que NAO e UBLE. Rotulos de grupo no dock. */
+  --shark-text: #6c99a4; /* Shark como texto. Escuro 6,4:1 sobre `bg`; claro 5,5:1. */
+  --shark-tint: rgba(108,153,164,0.16); /* Fundo de serie Shark em legendas e chips. */
+  --success: #2bd46b; /* SO indicador de status (ponto online, OK). Nunca para valor financeiro: recuperado e sempre `flamingo`. */
+  --danger: #ff6b6b; /* Erro de formulario e alerta. Nao e a cor de perda nos graficos (essa e `shark`). */
+  --warning: #f7b733; /* Aviso. Raro; prefira texto a cor. */
+  --glass-card: rgba(21,26,33,0.55); /* Fundo de card de vidro, com `blur-glass`. Equivalente estatico: `surface` + `line`. */
+  --glass-panel: rgba(21,26,33,0.90); /* Dropdown, dock expandido, modal. Com `blur-panel`. */
+  --glass-nav: rgba(7,9,12,0.62); /* Barra superior apos rolagem (8px). Com `blur-glass`. */
+  --hover-tint: rgba(239,238,235,0.06); /* Hover de item de menu, linha de tabela, pager. */
+  --aurora-flamingo: rgba(253,84,45,0.55); /* Mancha de aurora superior-esquerda (`blur-aurora`). Claro: metade da opacidade. */
+  --aurora-shark: rgba(108,153,164,0.45); /* Mancha de aurora direita. */
+  --focus: #fd542d; /* Anel de foco: 2px solido, offset 3px. 6,2:1 escuro e 5,1:1 claro sobre `bg`. */
+  --shadow-panel: 0 30px 80px -20px rgba(0,0,0,0.70); /* Dropdown e modal. */
+  --shadow-dock: 0 20px 60px -30px rgba(0,0,0,0.80); /* Dock lateral. */
+  --glow-flamingo: 0 10px 30px -8px rgba(253,84,45,0.60); /* Hover do CTA principal e do ponto ativo. Unico brilho do sistema. */
+}
+[data-theme="light"] {
+  --bg: #efeeeb;
+  --surface: #f7f6f3;
+  --surface-2: #ffffff;
+  --line: rgba(16,22,31,0.12);
+  --line-strong: rgba(16,22,31,0.24);
+  --text: #10161f;
+  --text-soft: #2a3340;
+  --text-muted: #646a73;
+  --text-dim: #c7cdd6;
+  --flamingo: #fd542d;
+  --flamingo-text: #b83516;
+  --flamingo-soft: #ff9a6b;
+  --flamingo-tint: #fbeee7;
+  --on-flamingo: #07090c;
+  --shark: #6c99a4;
+  --shark-text: #456470;
+  --shark-tint: #e6eef0;
+  --success: #136a3d;
+  --danger: #b3261e;
+  --warning: #8a5a00;
+  --glass-card: rgba(247,246,243,0.72);
+  --glass-panel: rgba(255,255,255,0.90);
+  --glass-nav: rgba(239,238,235,0.72);
+  --hover-tint: rgba(16,22,31,0.05);
+  --aurora-flamingo: rgba(253,84,45,0.22);
+  --aurora-shark: rgba(108,153,164,0.20);
+  --focus: #b83516;
+  --shadow-panel: 0 24px 60px -24px rgba(16,22,31,0.25);
+  --shadow-dock: 0 16px 48px -28px rgba(16,22,31,0.25);
+  --glow-flamingo: 0 10px 30px -10px rgba(253,84,45,0.45);
+}
+:root {
+  --space-1: 4px; /* Gap entre icone e rotulo; padding vertical de tag. */
+  --space-2: 8px; /* Gap de pilulas em menu; margem entre numero e rotulo em stat. */
+  --space-3: 12px; /* Padding horizontal de eyebrow e de item de dropdown; celula de tabela (12x8). */
+  --space-4: 16px; /* Gap de grid de cards (14-16px); padding de botao (9x16); gutter mobile. */
+  --space-5: 20px; /* Padding de card compacto. */
+  --space-6: 24px; /* Margem acima de tabela e ledger; padding de card de documento. */
+  --space-7: 28px; /* Padding de card padrao (26-28px); gutter desktop; margem acima de callout. */
+  --space-8: 32px; /* Separacao entre blocos de conteudo em documento. */
+  --space-11: 44px; /* Margem acima de grids de cards; alvo minimo de toque. */
+  --space-14: 56px; /* Margem acima de stat row / bento. */
+  --space-18: 72px; /* Passo da grade de fundo (`Aurora`); ritmo entre secoes de site. */
+  --space-22: 88px; /* Margem acima do pager; respiro de secao de landing. */
+  --measure: 1240px; /* Largura maxima do conteudo (site, dataroom). Documento: 980px. */
+  --radius-xs: 6px; /* Anel de foco, swatch de legenda. */
+  --radius-sm: 10px; /* Botao de icone (pin do dock), item de lista. */
+  --radius-md: 12px; /* Item de dropdown, campo de formulario. */
+  --radius-lg: 14px; /* Bloco de pager, aviso, card compacto. */
+  --radius-xl: 18px; /* Dropdown, dock, painel de vidro. */
+  --radius-2xl: 20px; /* Card padrao, card de documento, bento. */
+  --radius-pill: 999px; /* Eyebrow, tag, botao, chip de filtro, gatilho de menu. */
+  --blur-glass: 18px; /* Cards, barra superior, dock (com saturate(140%)). */
+  --blur-panel: 22px; /* Dropdown e modal (com saturate(150%)). */
+  --blur-aurora: 90px; /* Manchas de aurora no fundo. */
+  --duration-fast: 160ms; /* Fechar dropdown, hover de cor. */
+  --duration-base: 250ms; /* Hover de fundo, chip, abrir dropdown (220-280ms). */
+  --duration-exit: 320ms; /* Saida de pagina: opacity 0, blur 8px, translateY(-10px). */
+  --duration-dock: 450ms; /* Largura do dock e padding do conteudo quando fixado. */
+  --duration-enter: 700ms; /* Entrada de pagina: de opacity 0, blur 10px, translateY(18px). */
+  --duration-reveal: 800ms; /* Revelacao escalonada de blocos (stagger de 60ms, comecando em 100ms). */
+  --duration-aurora: 26s; /* Deriva de uma mancha de aurora (22 a 44s, alternate). */
+  --ease-uble: cubic-bezier(0.2, 0.7, 0.2, 1); /* A unica curva do sistema. Entrada rapida, pouso longo. */
+  --ease-linear: linear; /* So para tracos de SVG sendo desenhados (stroke-dashoffset). */
+  --opacity-grid: 0.55; /* Grade de 72px sobre o fundo escuro (0.35 no claro), mascarada por radial. */
+  --opacity-aurora: 0.55; /* Mancha de aurora no escuro; 0.3 no claro. */
+  --opacity-disabled: 0.45; /* Controles desabilitados. */
+  --font-display: "Archivo Black", "Archivo", system-ui, sans-serif;
+  --font-body: "Archivo", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --text-display-xl: 400 88px/0.98 var(--font-display); /* h1 de capa e hero. clamp(40px, 6.4vw, 88px). Max 15ch por linha. */
+  --text-display-l: 400 58px/1.02 var(--font-display); /* h2 de secao em site e deck. clamp(32px, 4.4vw, 58px). Max 20ch. */
+  --text-display-m: 400 40px/1.05 var(--font-display); /* Titulo de slide, de proposta e de relatorio (claro). Max 28ch. */
+  --text-display-s: 400 26px/1.1 var(--font-display); /* h3 de secao. Dentro de card, use `heading` no lugar. */
+  --text-wordmark: 400 128px/1 var(--font-display); /* SO para o nome da empresa quando o SVG nao couber (favicon tipografico, assinatura). Prefira sempre o asset `uble-wordmark-*.svg`. */
+  --text-heading: 600 20px/1.2 var(--font-body); /* Titulo de card, de coluna de bento, de item de dropdown (14px/600 nesse caso). */
+  --text-dek: 400 22px/1.45 var(--font-body); /* Subtitulo logo abaixo do display. `text`, nao `text-soft`. Max 52ch. */
+  --text-lede: 400 17px/1.6 var(--font-body); /* Primeiro paragrafo de uma secao, em `text-soft`; negrito em `text`. Max 62ch. */
+  --text-body: 400 16px/1.6 var(--font-body); /* Padrao de documento. 15px em interfaces densas. Max 70ch. */
+  --text-body-s: 400 14px/1.5 var(--font-body); /* Rotulo abaixo de numero grande (`text-soft`), celula de tabela, item de menu. */
+  --text-caption: 400 13px/1.5 var(--font-body); /* Nota de rodape, fonte de dado, aviso legal. `text-muted`. */
+  --text-button: 600 14px/1 var(--font-body); /* Rotulo de botao e CTA. Nunca caixa alta. */
+  --text-num-xl: 500 40px/1.1 var(--font-mono); /* Numero-chave em stat/bento. clamp(28px, 3vw, 40px). Em `text`; em `flamingo` quando for o que a UBLE recuperou. */
+  --text-num-l: 500 28px/1.1 var(--font-mono); /* Numero em card menor e em slide de deck. */
+  --text-eyebrow: 500 12px/1 var(--font-mono); /* Caixa alta. Dentro da pilula `Eyebrow`; o numero em `flamingo-text`, o texto em `text-soft`. */
+  --text-label: 500 11px/1 var(--font-mono); /* Caixa alta. Cabecalho de tabela, legenda de eixo, grupo do dock (`shark-text`), tag. */
+  --text-data: 400 13.5px/1.5 var(--font-mono); /* Celula numerica, ledger, callout tecnico. `font-variant-numeric: tabular-nums` sempre. */
+  --text-code: 400 13px/1.55 var(--font-mono); /* Trechos de codigo, endpoint, ID de transacao. */
+}
+.display-xl {
+  font-family: var(--font-display);
+  font-size: 88px;
+  line-height: 0.98;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+.display-l {
+  font-family: var(--font-display);
+  font-size: 58px;
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+.display-m {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+.display-s {
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 128px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+.heading {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.dek {
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1.45;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.lede {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body-s {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.caption {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.button {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.num-xl {
+  font-family: var(--font-mono);
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.num-l {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.data {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+html,body{margin:0;width:1584px;height:396px;overflow:hidden;background:var(--bg);color:var(--text);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+.stage{position:relative;width:1584px;height:396px}
+
+.aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.aurora i { position: absolute; border-radius: 50%; filter: blur(var(--blur-aurora)); opacity: var(--opacity-aurora); }
+.aurora i:nth-child(1) { width: 52vw; height: 52vw; left: -8vw; top: -22vw; background: radial-gradient(circle, var(--aurora-flamingo), transparent 65%); transform: translate(3vw, 2vw) scale(1.04); }
+.aurora i:nth-child(2) { width: 46vw; height: 46vw; right: -12vw; top: 4vw; background: radial-gradient(circle, var(--aurora-shark), transparent 65%); transform: translate(-2vw, 3vw) scale(0.97); }
+.aurora i:nth-child(3) { width: 30vw; height: 30vw; left: 30vw; top: 30vw; background: radial-gradient(circle, rgba(253,84,45,0.18), transparent 70%); }
+.grid { position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 20%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse 70% 55% at 50% 20%, #000 20%, transparent 75%); opacity: var(--opacity-grid); }
+</style></head><body><div class="stage"><div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div><div class="grid" aria-hidden="true"></div>
+<div style="position:absolute;left:72px;top:0;height:396px;display:flex;align-items:center;gap:72px">
+  <div style="width:300px"><svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="96 395 806 210">
+  
+  
+  <path fill="#EFEEEB" id="UBLE-PRETO"  d="M199,600c-20.6,0-38.2-3-52.9-9.1-14.5-6.3-25.6-15.5-33.4-27.7-7.8-12.4-11.7-27.6-11.7-45.7v-117.4h63.1v116.6c0,10.5,2.9,19.1,8.6,26,5.7,6.9,14.4,10.3,26,10.3s20.3-3.4,26-10.3c5.9-6.9,8.9-15.5,8.9-26v-116.6h63.1v117.4c0,18.1-3.9,33.3-11.7,45.7-7.6,12.2-18.8,21.4-33.4,27.7-14.5,6.1-32,9.1-52.6,9.1ZM330.4,596.6v-196.6h130.9c9.9,0,19,2.1,27.1,6.3,8.2,4,14.8,9.6,19.7,16.9,5,7.2,7.4,15.6,7.4,25.1s-1.5,17.3-4.6,23.4-7,11-12,14.6c-5,3.4-10.4,6-16.3,7.7v1.1c6.9,1.5,13,4.2,18.6,8,5.7,3.6,10.3,8.8,13.7,15.4,3.4,6.7,5.1,15.2,5.1,25.7s-2.6,19.6-7.7,27.4c-5.1,7.8-12,13.9-20.6,18.3-8.6,4.4-18.2,6.6-28.9,6.6h-132.6ZM393.5,550.9h48c4.4,0,7.9-1.5,10.6-4.6,2.7-3,4-7.6,4-13.7s-.7-5.4-2-7.7c-1.1-2.5-2.9-4.4-5.1-5.7-2.1-1.3-4.6-2-7.4-2h-48v33.7ZM393.5,476.6h43.4c3,0,5.6-.7,7.7-2,2.1-1.5,3.7-3.6,4.9-6.3,1.3-2.7,2-6,2-10s-1.4-7.7-4.3-10.6c-2.9-3-6.3-4.6-10.3-4.6h-43.4v33.4ZM544.2,596.6v-196.6h63.1v146.3h100.9v50.3h-164ZM727,596.6v-196.6h170v47.1h-106.9v27.1h91.4v45.1h-91.4v30h108.9v47.1h-172Z"/>
+</svg></div>
+  <div style="width:1px;height:140px;background:var(--line-strong)"></div>
+  <div>
+    <div class="eyebrow" style="display:inline-flex;gap:10px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text-soft);text-transform:uppercase"><b style="color:var(--flamingo-text);font-weight:500">Recuperação de pagamentos</b><span>para e-commerce</span></div>
+    <h1 class="display-l" style="margin:18px 0 0;max-width:20ch;color:var(--text)">Pagamento recusado <span style="color:var(--flamingo)">não é falta de interesse.</span></h1>
+  </div>
+</div></div></body></html>

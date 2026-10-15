@@ -1,0 +1,62 @@
+<!-- @dsCard group="Superfícies" height=360 page subtitle="Atmosfera de fundo: três manchas e a grade de 72px" -->
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  body { padding: 24px; font-size: 15px; line-height: 1.5; }
+  *, *::before, *::after { box-sizing: border-box; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: var(--radius-xs); }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 6px 12px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--glass-card); font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-soft); }
+  .eyebrow b { color: var(--flamingo-text); font-weight: 500; }
+  .card { position: relative; padding: var(--space-7); border-radius: var(--radius-2xl); background: var(--glass-card); backdrop-filter: blur(var(--blur-glass)); -webkit-backdrop-filter: blur(var(--blur-glass)); overflow: hidden; isolation: isolate; }
+  .card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+    background: linear-gradient(140deg, rgba(253,84,45,0.55), rgba(239,238,235,0.08) 40%, rgba(108,153,164,0.35));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+  [data-theme="light"] .card::before { background: linear-gradient(140deg, rgba(253,84,45,0.55), rgba(16,22,31,0.10) 40%, rgba(108,153,164,0.45)); }
+  .card.static { background: var(--surface); backdrop-filter: none; border: 1px solid var(--line-strong); }
+  .card.static::before { display: none; }
+  .k { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 40px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; color: var(--text); display: block; }
+  .k.flam { color: var(--flamingo-text); }
+  .l { color: var(--text-soft); font-size: 14px; margin-top: 8px; }
+  .l b { color: var(--text); font-weight: 600; }
+  .label { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+  .note { font-size: 13px; color: var(--text-muted); margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<style>
+  body { padding: 0; min-height: 360px; position: relative; overflow: hidden; }
+  .aurora { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .aurora i { position: absolute; border-radius: 50%; filter: blur(var(--blur-aurora)); opacity: var(--opacity-aurora); will-change: transform; }
+  .aurora i:nth-child(1) { width: 52vw; height: 52vw; left: -8vw; top: -22vw; background: radial-gradient(circle, var(--aurora-flamingo), transparent 65%); animation: d1 22s var(--ease-uble) infinite alternate; }
+  .aurora i:nth-child(2) { width: 46vw; height: 46vw; right: -12vw; top: 4vw; background: radial-gradient(circle, var(--aurora-shark), transparent 65%); animation: d2 26s var(--ease-uble) infinite alternate; }
+  .aurora i:nth-child(3) { width: 30vw; height: 30vw; left: 30vw; top: 30vw; background: radial-gradient(circle, rgba(253,84,45,0.18), transparent 70%); animation: d1 30s var(--ease-uble) infinite alternate-reverse; }
+  @keyframes d1 { to { transform: translate(8vw, 6vw) scale(1.1); } }
+  @keyframes d2 { to { transform: translate(-6vw, 8vw) scale(0.92); } }
+  .grid { position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: var(--space-18) var(--space-18); mask-image: radial-gradient(ellipse 70% 55% at 50% 20%, #000 20%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 20%, #000 20%, transparent 75%); opacity: var(--opacity-grid); }
+  [data-theme="light"] .aurora i { opacity: 0.3; } [data-theme="light"] .grid { opacity: 0.35; }
+  .hero { position: relative; z-index: 1; padding: 56px 48px; max-width: 760px; }
+  h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(32px, 5vw, 56px); line-height: 0.98; letter-spacing: -0.035em; margin: 22px 0 0; }
+  h1 .grad { background: linear-gradient(100deg, var(--flamingo) 10%, var(--flamingo-soft) 55%, var(--shark)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .dek { font-size: 18px; line-height: 1.45; color: var(--text); margin-top: 18px; max-width: 52ch; }
+  @media (prefers-reduced-motion: reduce) { .aurora i { animation: none; } }
+</style>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="grid" aria-hidden="true"></div>
+<section class="hero">
+  <span class="eyebrow"><b>00</b><span>Overview</span></span>
+  <h1>Pagamento recusado <span class="grad">não é falta de interesse.</span></h1>
+  <p class="dek">É receita perdida depois que o consumidor já decidiu comprar. A UBLE recupera essa venda sem trocar o gateway.</p>
+</section>
+
+</body>
+</html>
