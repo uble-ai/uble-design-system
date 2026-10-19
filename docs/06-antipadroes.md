@@ -44,7 +44,8 @@ O que a UBLE não faz, com o motivo. Se um material cai em qualquer item desta l
 
 ## Movimento
 
-- Contador que sobe até o número, texto que se digita, parallax, loop de logos, scroll-jacking.
+- Contador que sobe até o número, texto que se digita, parallax, scroll-jacking.
+- Loop de logos fora do site e da landing page, mais de uma faixa por página, ou logos coloridos na faixa. No site, a faixa segue a receita de Movimento.
 - Animar `width`, `height`, `top`, `left`.
 - Ignorar `prefers-reduced-motion`.
 

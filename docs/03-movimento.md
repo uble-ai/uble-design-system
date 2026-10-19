@@ -43,8 +43,15 @@ Movimento na UBLE existe para dar sequência à leitura, não para decorar. Tudo
 
 **Traço de SVG** (trilha de pagamento): `stroke-dasharray` igual ao comprimento, `stroke-dashoffset` indo a 0 em `ease-linear` para a linha-base e em `ease-uble` para o caminho Flamingo. Nós aparecem com `opacity` em 500ms quando o traço chega neles. Um pulso de 4px em Flamingo percorre o caminho com `animateMotion` em 4,4s, para sempre.
 
+**Carrossel de logos de clientes** (só site e landing page): uma faixa logo abaixo da primeira dobra. Logos em monocromático claro (`text` com opacidade 0,55, 1 no hover), altura de 28px (40px para marcas empilhadas), espaçamento constante. A faixa anda em `linear`, 48s por volta, com máscara de fade nas bordas. Para no hover e no foco. A cópia que fecha o loop leva `aria-hidden="true"` e `alt` vazio. Com reduced motion, a faixa fica parada e a cópia some.
+```css
+.marquee-track { display: flex; gap: 72px; width: max-content; animation: marquee 48s linear infinite; }
+.marquee:hover .marquee-track, .marquee:focus-within .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+```
+
 **Gráficos**: entram com `opacity` e `scale(0.98)` → `1` em 600ms quando cruzam o viewport (IntersectionObserver), uma única vez.
 
 ## O que não fazer
 
-Parallax, scroll-jacking, contadores que "sobem" até o número, texto que digita sozinho, loop de logos de clientes, animação em hover de tabela. Nada disso acrescenta leitura e tudo isso distrai do dado.
+Parallax, scroll-jacking, contadores que "sobem" até o número, texto que digita sozinho, loop de logos fora do site (deck, dataroom, proposta, relatório) ou mais de uma faixa de logos por página, animação em hover de tabela. Nada disso acrescenta leitura e tudo isso distrai do dado.

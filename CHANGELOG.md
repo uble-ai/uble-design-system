@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2 (2026-10-19)
+
+- Movimento: receita do carrossel de logos de clientes, permitido só em site e landing page (uma faixa abaixo da primeira dobra, monocromático claro, 48s linear, pausa no hover e no foco, parado com reduced motion).
+- Antipadrões: loop de logos fora do site, mais de uma faixa por página ou logos coloridos.
+- Plugin uble-brand 0.1.2 com a mesma regra.
+
 ## 1.0.1 (2026-10-15)
 
 - Eyebrow: em site e landing page passa a ser opcional e nunca numerado. As seções abrem direto no título; o eyebrow fica só no topo da página ou acima do CTA. Numeração continua em deck, dataroom e proposta, que são lidos em ordem.
